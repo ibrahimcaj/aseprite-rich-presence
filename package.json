@@ -1,0 +1,17 @@
+{
+    "name": "aseprite",
+    "version": "1.0.0",
+    "description": "A simple to use Discord RPC application for Aseprite.",
+    "main": "index.js",
+    "bin": "bin.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@arcsine/win-info": "^0.1.2",
+        "discord-rpc": "^3.1.1",
+        "find-process": "^1.4.3"
+    }
+}
