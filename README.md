@@ -1,6 +1,8 @@
 # Aseprite Rich Presence
 - A simple to use Discord RPC application for Aseprite.
 
+![](https://i.imgur.com/wxJmv4z.png)
+
 # Setup
 - Pull the repository contents, or download the repository ZIP and extract the contents.
 - In the console, type `npm install --global windows-build-tools`, this is required.
