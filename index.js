@@ -75,17 +75,15 @@ async function UpdatePresence() {
     }
 }
 
-module.exports = function() {
-    UpdatePresence();
+UpdatePresence();
 
-    client.on("ready", () => {
-        console.log("Connected to Discord.");
+client.on("ready", () => {
+    console.log("Connected to Discord.");
+    UpdatePresence();
+    setInterval(() => {
         UpdatePresence();
-        setInterval(() => {
-            UpdatePresence();
-        }, 15000);
-    });
-}
+    }, 15000);
+});
 
 console.log("Connecting...");
 client.login({ clientId: "732308035661201542" });
