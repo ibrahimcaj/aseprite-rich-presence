@@ -1,5 +1,5 @@
 {
-    "name": "aseprite",
+    "name": "aseprite-rich-presence",
     "version": "1.0.0",
     "description": "A simple to use Discord RPC application for Aseprite.",
     "main": "index.js",
@@ -7,8 +7,12 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "",
-    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vanishedvan/aseprite-rich-presence.git"
+    },
+    "author": "vanishedvan",
+    "license": "MIT",
     "dependencies": {
         "@arcsine/win-info": "^0.1.2",
         "discord-rpc": "^3.1.1",
