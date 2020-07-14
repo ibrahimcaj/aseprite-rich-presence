@@ -29,3 +29,6 @@ A simple to use Discord RPC application for Aseprite.
 
 ## Note
 - Please note that **only** the currently open **file name and extension** will be shown on the presence.
+
+## License
+- This repository has been licensed by the MIT license: [here](https://github.com/vanishedvan/aseprite-rich-presence/blob/master/LICENSE).
