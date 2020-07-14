@@ -11,10 +11,10 @@ A simple to use Discord RPC application for Aseprite.
 - Type `node index.js` to run the rich presence.
 
 ## Supported File Extensions
-- ASE/ASEPRITE,
-- JPG/JPEG,
-- PNG,
-- GIF,
+- `ASE`/`ASEPRITE`,
+- `JPG`/`JPEG`,
+- `PNG`,
+- `GIF`,
 - Other extensions will be shown as _image_.
 
 ## Note
