@@ -1,8 +1,21 @@
 const wi = require("@arcsine/win-info");
+const fs = require('fs');
 const fp = require("find-process");
+const readline = require("readline");
+var exec = require('child_process').execFile;
+
+const setPath = require('./path.js');
+
+const config = require('./config.json');
+const configName = './config.json';
 
 const { Client } = require("discord-rpc");
 const client = new Client({ transport: "ipc" });
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
 const start = new Date();
 
@@ -75,17 +88,37 @@ async function UpdatePresence() {
     }
 }
 
-UpdatePresence();
-
-client.on("ready", () => {
-    console.log("Connected to Discord.");
+function StartPresence() {
     UpdatePresence();
-    setInterval(() => {
-        UpdatePresence();
-    }, 15000);
-});
 
-console.log("Connecting...");
-client.login({ clientId: "732308035661201542" });
+    client.on("ready", () => {
+        console.log("Connected to Discord.");
+        UpdatePresence();
+        setInterval(() => {
+            UpdatePresence();
+        }, 15000);
+    });
+
+    console.log("Connecting...");
+    client.login({ clientId: config.clientID });
+
+    exec(`${config.path}`);  
+}
+
+if (config.path == '') {
+    rl.question("Please enter your Aseprite.exe path: ", function(path) {
+        rl.close();
+
+        config.path = path;
+
+        fs.writeFile(configName, JSON.stringify(config, null, 4), function writeJSON(err) {
+            if (err) return console.log(err);
+
+            StartPresence();
+        });
+    });
+} else {
+    StartPresence();
+}
 
 process.on("unhandledRejection", console.error);
