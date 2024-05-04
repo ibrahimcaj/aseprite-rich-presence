@@ -1,4 +1,4 @@
-# ⚠️ Aseprite Rich Presence (archived)
+# Aseprite Rich Presence
 
 A simple to use Discord RPC application for Aseprite.
 
