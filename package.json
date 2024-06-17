@@ -15,7 +15,7 @@
     "license": "MIT",
     "dependencies": {
         "@arcsine/win-info": "^0.1.2",
-        "discord-rpc": "^3.1.1",
+        "discord-rpc": "^3.2.0",
         "find-process": "^1.4.3"
     }
 }
